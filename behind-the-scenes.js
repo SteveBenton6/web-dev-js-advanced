@@ -13,9 +13,9 @@ console.log(hobbies);
 const person = { age: 48 };
 
 function getAdultYears(p) {
-  p.age -= 18;
-  return p.age;
-  //   return p.age - 18; //overcome reference value issue
+  //   p.age -= 18;
+  //   return p.age;
+  return p.age - 18; //overcome reference value issue
 }
 
 console.log(getAdultYears({ ...person })); //use spread to overcome reference value issue
