@@ -19,3 +19,13 @@ const gardener = new Job("Gardener", "Wokingham", 25000);
 console.log(coder);
 coder.describe();
 gardener.describe();
+
+const teams = ["Reading", "Cambridge United"];
+const [local, traditional] = teams;
+console.log(local);
+console.log(traditional);
+
+const club = { team: "Reading", stadium: "Select Car Leasing" };
+const { team: teamName, stadium } = club;
+console.log(teamName);
+console.log(stadium);
