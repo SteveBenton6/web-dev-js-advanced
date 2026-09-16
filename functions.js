@@ -25,3 +25,5 @@ console.log(sumUpR(1, 5, 10, 11, 20));
 
 const inputNumbers = [1, 5, 10, 11, 23];
 console.log(sumUpR(...inputNumbers));
+
+console.dir(sumUpR);
