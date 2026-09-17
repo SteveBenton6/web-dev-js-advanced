@@ -14,6 +14,7 @@ const fs = require("fs/promises");
 //   let fileData;
 
 //   fs.readFile("data.txt", function (error, fileData) {
+//     if (error) {console.log(error)};
 //     console.log("File parsing done!");
 //     console.log(fileData.toString());
 //     // start another async task that sends the data to a database
@@ -34,6 +35,9 @@ function readFile() {
     })
     .then(function () {
       console.log("Hello 2nd Promise!!");
+    })
+    .catch(function (error) {
+      console.log(error);
     });
 
   console.log("Hello Async World!");
