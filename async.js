@@ -44,3 +44,18 @@ function readFile() {
 }
 
 readFile();
+
+async function readFileTwo() {
+  //async await Version
+  let fileData;
+  try {
+    fileData = await fs.readFile("data-two.txt");
+  } catch (error) {
+    console.log(error);
+  }
+  console.log("File parsing done!");
+  console.log(fileData.toString());
+  console.log("Hello async await World!");
+}
+
+readFileTwo();
