@@ -1,4 +1,4 @@
-const fs = require("fs");
+const fs = require("fs/promises");
 
 // function readFile() {  //Synchronous Version
 //   let fileData;
@@ -9,14 +9,32 @@ const fs = require("fs");
 //   console.log("Hello Async World!");
 // }
 
+// function readFile() {
+//   //Asynchronous Version
+//   let fileData;
+
+//   fs.readFile("data.txt", function (error, fileData) {
+//     console.log("File parsing done!");
+//     console.log(fileData.toString());
+//     // start another async task that sends the data to a database
+//   });
+
+//   console.log("Hello Async World!");
+// }
+
 function readFile() {
-  //Asynchronous Version
+  //Promises Version
   let fileData;
 
-  fs.readFile("data.txt", function (error, fileData) {
-    console.log("File parsing done!");
-    console.log(fileData.toString());
-  });
+  fs.readFile("data.txt")
+    .then(function (fileData) {
+      console.log("File parsing done!");
+      console.log(fileData.toString());
+      // return anotherAsyncOperation
+    })
+    .then(function () {
+      console.log("Hello 2nd Promise!!");
+    });
 
   console.log("Hello Async World!");
 }
