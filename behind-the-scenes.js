@@ -18,5 +18,6 @@ function getAdultYears(p) {
   return p.age - 18; //overcome reference value issue
 }
 
+console.log({ ...person });
 console.log(getAdultYears({ ...person })); //use spread to overcome reference value issue
 console.log(person);
