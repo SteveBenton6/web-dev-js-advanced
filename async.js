@@ -58,4 +58,6 @@ async function readFileTwo() {
   console.log("Hello async await World!");
 }
 
+console.log("Async function next:");
+
 readFileTwo();

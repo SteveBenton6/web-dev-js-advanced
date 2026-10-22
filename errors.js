@@ -11,8 +11,9 @@ function readFile() {
     app.get("/", function (req, res) {
       res.render("index");
     });
-  } catch {
+  } catch (error) {
     console.log("A routing error occured!");
+    console.log(`Error message feedback: ${error.message}`);
   }
   console.log("Hello Node JS World!");
 }
